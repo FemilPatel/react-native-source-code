@@ -9,3 +9,21 @@ Fitness & Step Counter App
 
 👉 Buy Now:
 https://femilsabhaya.gumroad.com/l/iymte
+
+### ❌ Tic Tac Toe
+Classic Tic-Tac-Toe board game with multiplayer and offline play.
+
+👉 Download & Play (Google Play):
+https://play.google.com/store/apps/details?id=com.tic_tac_toe_application_dev&hl=en_IN
+
+👉 App Store:
+*Coming Soon*
+
+### 🔢 Sudoku Game
+Classic Sudoku brain puzzle game with multiple difficulty levels.
+
+👉 Download & Play (Google Play):
+https://play.google.com/store/apps/details?id=com.sudoku_game_dev&hl=en_IN
+
+👉 App Store:
+*Coming Soon*
