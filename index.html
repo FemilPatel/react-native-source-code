@@ -3,199 +3,524 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>React Native Source Code Collection</title>
+  <title>React Native Source Code & App Collection</title>
+  <meta name="description" content="Production-ready React Native applications and source code. Download personal apps or purchase source code for your next project.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
   <style>
+    :root {
+      --bg-main: #090d16;
+      --bg-card: #111827;
+      --bg-card-hover: #162032;
+      --border-color: rgba(255, 255, 255, 0.08);
+      --border-glow: rgba(59, 130, 246, 0.4);
+      --primary: #3b82f6;
+      --primary-gradient: linear-gradient(135deg, #2563eb, #7c3aed);
+      --accent-cyan: #06b6d4;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-sub: #64748b;
+      --radius-lg: 20px;
+      --radius-md: 12px;
+      --radius-sm: 8px;
+    }
+
     * { margin: 0; padding: 0; box-sizing: border-box; }
+    
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #0a0a0a;
-      color: #e0e0e0;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-main);
       line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
     }
+
+    /* Background Ambient Glow */
+    .bg-glow {
+      position: absolute;
+      top: -150px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(124, 58, 237, 0.1) 40%, rgba(0,0,0,0) 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
     .hero {
+      position: relative;
       text-align: center;
-      padding: 80px 20px 60px;
-      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-      border-bottom: 1px solid rgba(255,255,255,0.05);
+      padding: 90px 20px 40px;
+      z-index: 1;
     }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(59, 130, 246, 0.1);
+      border: 1px solid rgba(59, 130, 246, 0.25);
+      color: #60a5fa;
+      padding: 6px 16px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 24px;
+      backdrop-filter: blur(8px);
+    }
+
     .hero h1 {
-      font-size: 2.8rem;
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
       font-weight: 800;
-      margin-bottom: 16px;
-      background: linear-gradient(135deg, #00d2ff, #7b2ff7);
+      letter-spacing: -0.02em;
+      margin-bottom: 18px;
+      background: linear-gradient(135deg, #ffffff 30%, #94a3b8 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
+
+    .hero h1 span {
+      background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
     .hero p {
       font-size: 1.15rem;
-      color: #94a3b8;
-      max-width: 600px;
-      margin: 0 auto;
+      color: var(--text-muted);
+      max-width: 620px;
+      margin: 0 auto 36px;
     }
+
+    /* Container */
     .container {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: 0 auto;
-      padding: 60px 20px;
+      padding: 0 20px 80px;
+      flex: 1;
+      position: relative;
+      z-index: 1;
     }
+
+    /* Tab Switcher Styling */
+    .tabs-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 44px;
+    }
+
+    .tabs {
+      display: inline-flex;
+      background: rgba(17, 24, 39, 0.8);
+      border: 1px solid var(--border-color);
+      padding: 6px;
+      border-radius: 16px;
+      backdrop-filter: blur(12px);
+      gap: 6px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .tab-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 12px 24px;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: inherit;
+    }
+
+    .tab-btn:hover {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .tab-btn.active {
+      background: var(--primary-gradient);
+      color: #ffffff;
+      box-shadow: 0 4px 20px rgba(37, 99, 235, 0.4);
+    }
+
+    .tab-count {
+      background: rgba(255, 255, 255, 0.15);
+      font-size: 0.75rem;
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-weight: 700;
+    }
+
+    .tab-btn.active .tab-count {
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    /* Apps Grid */
     .apps {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 28px;
     }
+
+    /* Card Styling */
     .card {
-      background: #111827;
-      border: 1px solid #1f2937;
-      border-radius: 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
       padding: 32px;
-      transition: transform 0.2s, border-color 0.2s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
     }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.5), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
     .card:hover {
-      transform: translateY(-4px);
-      border-color: #3b82f6;
+      transform: translateY(-6px);
+      border-color: rgba(59, 130, 246, 0.3);
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5), 0 0 30px rgba(59, 130, 246, 0.1);
     }
-    .card-icon {
-      font-size: 2.5rem;
-      margin-bottom: 16px;
+
+    .card:hover::before {
+      opacity: 1;
     }
-    .card h3 {
-      font-size: 1.3rem;
-      font-weight: 700;
-      margin-bottom: 8px;
-      color: #f1f5f9;
-    }
-    .card p {
-      color: #94a3b8;
-      font-size: 0.95rem;
+
+    /* Card Header */
+    .card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
       margin-bottom: 20px;
     }
-    .card .stack {
-      font-size: 0.8rem;
-      color: #64748b;
-      margin-bottom: 16px;
+
+    .card-icon {
+      font-size: 2.2rem;
+      width: 58px;
+      height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 16px;
     }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(59, 130, 246, 0.12);
+      color: #60a5fa;
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .card h3 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.55;
+      margin-bottom: 20px;
+    }
+
+    .card .stack {
+      font-size: 0.82rem;
+      color: var(--accent-cyan);
+      background: rgba(6, 182, 212, 0.08);
+      border: 1px solid rgba(6, 182, 212, 0.15);
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
     .card .features {
       list-style: none;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
+      background: rgba(0, 0, 0, 0.2);
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(255, 255, 255, 0.03);
     }
+
     .card .features li {
-      font-size: 0.85rem;
+      font-size: 0.88rem;
       color: #cbd5e1;
-      padding: 3px 0;
+      padding: 4px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
+
     .card .features li::before {
-      content: "+ ";
-      color: #3b82f6;
-      font-weight: 700;
+      content: "✓";
+      color: #10b981;
+      font-weight: 800;
+      font-size: 0.85rem;
     }
+
+    /* Buttons */
+    .btn-group {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: auto;
+      padding-top: 16px;
+    }
+
     .btn {
-      display: inline-block;
-      padding: 10px 24px;
-      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 11px 20px;
+      border-radius: 12px;
       text-decoration: none;
       font-weight: 600;
       font-size: 0.9rem;
-      transition: opacity 0.2s;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      flex: 1;
+      min-width: 130px;
+      text-align: center;
+      font-family: inherit;
     }
-    .btn:hover { opacity: 0.85; }
+
     .btn-primary {
-      background: linear-gradient(135deg, #3b82f6, #7b2ff7);
-      color: #fff;
+      background: var(--primary-gradient);
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
     }
-    .btn-outline {
-      border: 1px solid #3b82f6;
-      color: #3b82f6;
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
+      opacity: 0.95;
     }
+
     .btn-store {
       background: #1f2937;
-      color: #e0e0e0;
+      color: #f3f4f6;
       border: 1px solid #374151;
-      font-size: 0.8rem;
-      padding: 8px 16px;
     }
-    .btn-group {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
+
+    .btn-store:hover {
+      background: #374151;
+      color: #ffffff;
+      border-color: #4b5563;
+      transform: translateY(-2px);
     }
-    .badge {
-      display: inline-block;
-      background: rgba(59,130,246,0.15);
+
+    .btn-outline {
+      border: 1px solid rgba(59, 130, 246, 0.4);
       color: #60a5fa;
-      padding: 4px 10px;
-      border-radius: 20px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      margin-bottom: 12px;
+      background: rgba(59, 130, 246, 0.05);
     }
+
+    .btn-outline:hover {
+      background: rgba(59, 130, 246, 0.15);
+      border-color: #60a5fa;
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    /* Animation on tab switch */
+    .card.hidden {
+      display: none !important;
+    }
+
+    .card.fade-in {
+      animation: fadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Footer */
     .footer {
       text-align: center;
       padding: 40px 20px;
-      border-top: 1px solid #1f2937;
-      color: #64748b;
-      font-size: 0.85rem;
+      border-top: 1px solid var(--border-color);
+      color: var(--text-sub);
+      font-size: 0.9rem;
+      position: relative;
+      z-index: 1;
+      background: rgba(9, 13, 22, 0.8);
     }
-    .footer a { color: #3b82f6; text-decoration: none; }
-    .footer a:hover { text-decoration: underline; }
+
+    .footer a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .hero { padding: 60px 16px 30px; }
+      .tabs { width: 100%; justify-content: center; }
+      .tab-btn { padding: 10px 14px; font-size: 0.85rem; }
+      .card { padding: 24px; }
+      .btn { min-width: 100%; }
+    }
   </style>
 </head>
 <body>
 
+  <div class="bg-glow"></div>
+
   <div class="hero">
-    <h1>React Native Source Code</h1>
-    <p>Production-ready React Native applications. Buy the source code, customize, and ship your own app.</p>
+    <div class="hero-badge">🚀 React Native Applications & Source Code</div>
+    <h1>Build & Ship Faster with <span>React Native</span></h1>
+    <p>Explore production-ready mobile apps. Download personal apps directly or buy high-quality source code to launch your own app.</p>
   </div>
 
   <div class="container">
-    <div class="apps">
+    
+    <!-- Tab Switcher -->
+    <div class="tabs-wrapper">
+      <div class="tabs" role="tablist">
+        <button class="tab-btn active" data-tab="all" role="tab">
+          <span>⚡ All Apps</span>
+          <span class="tab-count">4</span>
+        </button>
+        <button class="tab-btn" data-tab="personal" role="tab">
+          <span>📱 Personal Downloads</span>
+          <span class="tab-count">2</span>
+        </button>
+        <button class="tab-btn" data-tab="buy" role="tab">
+          <span>🛒 Buy Source Code</span>
+          <span class="tab-count">4</span>
+        </button>
+      </div>
+    </div>
 
-      <div class="card">
-        <div class="card-icon">🏃</div>
-        <span class="badge">Fitness</span>
-        <h3>Steps Set Go</h3>
-        <p>Fitness and step counter app built with React Native.</p>
+    <!-- Apps Grid -->
+    <div class="apps" id="appsGrid">
+
+      <!-- Card: Tic Tac Toe -->
+      <div class="card" data-categories="personal buy">
+        <div>
+          <div class="card-top">
+            <div class="card-icon">❌</div>
+            <span class="badge">Game</span>
+          </div>
+          <h3>Tic Tac Toe</h3>
+          <p>Classic Tic-Tac-Toe board game with smooth animations, multiplayer mode, and offline AI play.</p>
+        </div>
         <div class="btn-group">
-          <a href="#" class="btn btn-primary">Buy Source Code</a>
+          <a href="https://play.google.com/store/apps/details?id=com.tic_tac_toe_application_dev&hl=en_IN" class="btn btn-store" target="_blank" rel="noopener">
+            <span>▶</span> Google Play
+          </a>
+          <a href="mailto:femilsabhaya166@gmail.com?subject=Inquiry%3A%20Tic%20Tac%20Toe%20Source%20Code" class="btn btn-outline">
+            Buy Source Code
+          </a>
         </div>
       </div>
 
-      <div class="card">
-        <div class="card-icon">❌</div>
-        <span class="badge">Game</span>
-        <h3>Tic Tac Toe</h3>
-        <p>Classic Tic-Tac-Toe board game with multiplayer and offline play.</p>
+      <!-- Card: Sudoku Game -->
+      <div class="card" data-categories="personal buy">
+        <div>
+          <div class="card-top">
+            <div class="card-icon">🔢</div>
+            <span class="badge">Puzzle</span>
+          </div>
+          <h3>Sudoku Game</h3>
+          <p>Classic Sudoku brain puzzle game with multiple difficulty levels, hints, and mistake tracking.</p>
+        </div>
         <div class="btn-group">
-          <a href="https://play.google.com/store/apps/details?id=com.tic_tac_toe_application_dev&hl=en_IN" class="btn btn-store" target="_blank">Google Play</a>
-          <a href="#" class="btn btn-outline">Buy Source Code</a>
+          <a href="https://play.google.com/store/apps/details?id=com.sudoku_game_dev&hl=en_IN" class="btn btn-store" target="_blank" rel="noopener">
+            <span>▶</span> Google Play
+          </a>
+          <a href="mailto:femilsabhaya166@gmail.com?subject=Inquiry%3A%20Sudoku%20Game%20Source%20Code" class="btn btn-outline">
+            Buy Source Code
+          </a>
         </div>
       </div>
 
-      <div class="card">
-        <div class="card-icon">🔢</div>
-        <span class="badge">Puzzle</span>
-        <h3>Sudoku Game</h3>
-        <p>Classic Sudoku brain puzzle game with multiple difficulty levels.</p>
+      <!-- Card: Steps Set Go -->
+      <div class="card" data-categories="buy">
+        <div>
+          <div class="card-top">
+            <div class="card-icon">🏃</div>
+            <span class="badge">Fitness</span>
+          </div>
+          <h3>Steps Set Go</h3>
+          <p>Fitness and step counter application with clean UI, goal tracking, and step history analytics built with React Native.</p>
+        </div>
         <div class="btn-group">
-          <a href="https://play.google.com/store/apps/details?id=com.sudoku_game_dev&hl=en_IN" class="btn btn-store" target="_blank">Google Play</a>
-          <a href="#" class="btn btn-outline">Buy Source Code</a>
+          <a href="mailto:femilsabhaya166@gmail.com?subject=Inquiry%3A%20Steps%20Set%20Go%20Source%20Code" class="btn btn-primary">
+            Buy Source Code
+          </a>
         </div>
       </div>
 
-      <div class="card">
-        <div class="card-icon">🤖</div>
-        <span class="badge">AI Agent</span>
-        <h3>Brand AI</h3>
-        <p>AI-powered personal brand automation agent. Creates content, posts it, replies to your audience, and grows your personal brand.</p>
-        <div class="stack">Expo 57 &middot; Node.js &middot; OpenAI &middot; OAuth 2.0</div>
-        <ul class="features">
-          <li>AI content generation & scheduling</li>
-          <li>Auto-publish to social accounts</li>
-          <li>AI-powered inbox replies</li>
-          <li>Analytics dashboard</li>
-          <li>Multi-platform (X, LinkedIn, Instagram)</li>
-          <li>Dark mode support</li>
-        </ul>
+      <!-- Card: Brand AI -->
+      <div class="card" data-categories="buy">
+        <div>
+          <div class="card-top">
+            <div class="card-icon">🤖</div>
+            <span class="badge">AI Agent</span>
+          </div>
+          <h3>Brand AI — Personal Brand Agent</h3>
+          <p>AI-powered personal brand automation agent. Generates content, schedules posts, drafts inbox replies, and grows your audience.</p>
+          <div class="stack">Expo SDK 57 &middot; Node.js &middot; OpenAI &middot; OAuth 2.0</div>
+          <ul class="features">
+            <li>AI content generation & post scheduling</li>
+            <li>Auto-publish to connected social platforms</li>
+            <li>AI inbox reply drafting & smart responses</li>
+            <li>Analytics dashboard (Reach, Followers)</li>
+            <li>Multi-platform (X, LinkedIn, Instagram)</li>
+            <li>Dark mode & keyless fallback generator</li>
+          </ul>
+        </div>
         <div class="btn-group">
-          <a href="mailto:femilsabhaya166@gmail.com?subject=Brand AI Source Code Purchase" class="btn btn-primary">Buy Now</a>
+          <a href="mailto:femilsabhaya166@gmail.com?subject=Inquiry%3A%20Brand%20AI%20Source%20Code" class="btn btn-primary">
+            Buy Source Code
+          </a>
         </div>
       </div>
 
@@ -204,9 +529,39 @@
 
   <div class="footer">
     <p>&copy; 2026 Femil Patel. All rights reserved.<br>
-    Contact: <a href="mailto:femilsabhaya166@gmail.com">femilsabhaya166@gmail.com</a>
+    Questions or custom inquiries? Contact <a href="mailto:femilsabhaya166@gmail.com">femilsabhaya166@gmail.com</a>
     </p>
   </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const tabButtons = document.querySelectorAll('.tab-btn');
+      const cards = document.querySelectorAll('.card');
+
+      tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          tabButtons.forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+
+          const targetTab = button.getAttribute('data-tab');
+
+          cards.forEach(card => {
+            const categories = card.getAttribute('data-categories').split(' ');
+
+            card.classList.remove('fade-in');
+
+            if (targetTab === 'all' || categories.includes(targetTab)) {
+              card.classList.remove('hidden');
+              void card.offsetWidth;
+              card.classList.add('fade-in');
+            } else {
+              card.classList.add('hidden');
+            }
+          });
+        });
+      });
+    });
+  </script>
 
 </body>
 </html>
