@@ -29,3 +29,22 @@ https://play.google.com/store/apps/details?id=com.sudoku_game_dev&hl=en_IN
 
 👉 App Store:
 _Coming Soon_
+
+### 🤖 Brand AI — Personal Brand Agent
+
+AI-powered personal brand automation agent. Creates content, posts it, replies to your audience, and grows your personal brand automatically.
+
+**Stack:** Expo SDK 57 (React Native) · Node.js server · OpenAI LLM · OAuth 2.0 (X, LinkedIn)
+
+**Features:**
+
+- AI content generation (captions, hashtags, scheduling)
+- Auto-publish to connected social accounts
+- AI-powered inbox reply drafting
+- Dashboard with analytics (followers, reach, engagement)
+- Multi-platform support (X, LinkedIn, Instagram, YouTube, TikTok)
+- Onboarding flow with brand profile setup
+- Dark mode support
+- Works with or without OpenAI API key (built-in fallback generator)
+
+👉 Buy Now: Contact: femilsabhaya166@gmail.com
