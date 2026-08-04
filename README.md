@@ -48,7 +48,6 @@ AI-powered personal brand automation agent. Creates content, posts it, replies t
 - Dark mode support
 
 - 🛒 **Buy Now** — _Available on the website_
-
 ---
 
 ## 🚀 CI/CD
