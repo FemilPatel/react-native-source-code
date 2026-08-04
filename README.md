@@ -30,7 +30,7 @@ Classic Sudoku brain puzzle game with multiple difficulty levels.
 
 Fitness and step counter app with goal tracking and analytics.
 
-- 🚧 Coming Soon
+- 🛒 **Buy Now** — _Available on the website_
 
 ### 🤖 Brand AI — _AI Agent_
 
@@ -47,7 +47,7 @@ AI-powered personal brand automation agent. Creates content, posts it, replies t
 - Multi-platform support (X, LinkedIn, Instagram, YouTube, TikTok)
 - Dark mode support
 
-- 🚧 Coming Soon
+- 🛒 **Buy Now** — _Available on the website_
 
 ---
 
