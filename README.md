@@ -1,31 +1,33 @@
 # 🚀 React Native Source Code Collection
 
-Production-ready React Native applications. Browse, download, or buy source code to ship your own app.
+My collection of production-ready React Native applications.
 
 🌐 **Live Site:** [View Website](https://YOUR_USERNAME.github.io/react-native-source-code/)
 
 ---
 
-## 📱 Available Apps
+## 📱 Published Apps
 
 ### ❌ Tic Tac Toe — *Game*
 Classic Tic-Tac-Toe board game with multiplayer and offline AI play.
 
 - 👉 [Download on Google Play](https://play.google.com/store/apps/details?id=com.tic_tac_toe_application_dev&hl=en_IN)
 - 👉 App Store: _Coming Soon_
-- 💰 Source code available for purchase
 
 ### 🔢 Sudoku Game — *Puzzle*
 Classic Sudoku brain puzzle game with multiple difficulty levels.
 
 - 👉 [Download on Google Play](https://play.google.com/store/apps/details?id=com.sudoku_game_dev&hl=en_IN)
 - 👉 App Store: _Coming Soon_
-- 💰 Source code available for purchase
+
+---
+
+## 🛠️ My Projects
 
 ### 🏃 Steps Set Go — *Fitness*
 Fitness and step counter app with goal tracking and analytics.
 
-- 💰 Source code available for purchase
+- 🚧 Coming Soon
 
 ### 🤖 Brand AI — *AI Agent*
 AI-powered personal brand automation agent. Creates content, posts it, replies to your audience, and grows your personal brand automatically.
@@ -40,7 +42,7 @@ AI-powered personal brand automation agent. Creates content, posts it, replies t
 - Multi-platform support (X, LinkedIn, Instagram, YouTube, TikTok)
 - Dark mode support
 
-- 💰 Source code available for purchase
+- 🚧 Coming Soon
 
 ---
 
@@ -54,7 +56,6 @@ See [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) for the pipel
 
 ## 📬 Contact
 
-For source code purchases or custom inquiries:  
 📧 **femilsabhaya166@gmail.com**
 
 ---
