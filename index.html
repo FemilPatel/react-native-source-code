@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React Native Source Code Collection</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0a0a0a;
+      color: #e0e0e0;
+      line-height: 1.6;
+    }
+    .hero {
+      text-align: center;
+      padding: 80px 20px 60px;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #00d2ff, #7b2ff7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero p {
+      font-size: 1.15rem;
+      color: #94a3b8;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+    .apps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .card {
+      background: #111827;
+      border: 1px solid #1f2937;
+      border-radius: 16px;
+      padding: 32px;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #3b82f6;
+    }
+    .card-icon {
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+    }
+    .card h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #f1f5f9;
+    }
+    .card p {
+      color: #94a3b8;
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+    }
+    .card .stack {
+      font-size: 0.8rem;
+      color: #64748b;
+      margin-bottom: 16px;
+    }
+    .card .features {
+      list-style: none;
+      margin-bottom: 20px;
+    }
+    .card .features li {
+      font-size: 0.85rem;
+      color: #cbd5e1;
+      padding: 3px 0;
+    }
+    .card .features li::before {
+      content: "+ ";
+      color: #3b82f6;
+      font-weight: 700;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: opacity 0.2s;
+    }
+    .btn:hover { opacity: 0.85; }
+    .btn-primary {
+      background: linear-gradient(135deg, #3b82f6, #7b2ff7);
+      color: #fff;
+    }
+    .btn-outline {
+      border: 1px solid #3b82f6;
+      color: #3b82f6;
+    }
+    .btn-store {
+      background: #1f2937;
+      color: #e0e0e0;
+      border: 1px solid #374151;
+      font-size: 0.8rem;
+      padding: 8px 16px;
+    }
+    .btn-group {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(59,130,246,0.15);
+      color: #60a5fa;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .footer {
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 1px solid #1f2937;
+      color: #64748b;
+      font-size: 0.85rem;
+    }
+    .footer a { color: #3b82f6; text-decoration: none; }
+    .footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <h1>React Native Source Code</h1>
+    <p>Production-ready React Native applications. Buy the source code, customize, and ship your own app.</p>
+  </div>
+
+  <div class="container">
+    <div class="apps">
+
+      <div class="card">
+        <div class="card-icon">🏃</div>
+        <span class="badge">Fitness</span>
+        <h3>Steps Set Go</h3>
+        <p>Fitness and step counter app built with React Native.</p>
+        <div class="btn-group">
+          <a href="#" class="btn btn-primary">Buy Source Code</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">❌</div>
+        <span class="badge">Game</span>
+        <h3>Tic Tac Toe</h3>
+        <p>Classic Tic-Tac-Toe board game with multiplayer and offline play.</p>
+        <div class="btn-group">
+          <a href="https://play.google.com/store/apps/details?id=com.tic_tac_toe_application_dev&hl=en_IN" class="btn btn-store" target="_blank">Google Play</a>
+          <a href="#" class="btn btn-outline">Buy Source Code</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🔢</div>
+        <span class="badge">Puzzle</span>
+        <h3>Sudoku Game</h3>
+        <p>Classic Sudoku brain puzzle game with multiple difficulty levels.</p>
+        <div class="btn-group">
+          <a href="https://play.google.com/store/apps/details?id=com.sudoku_game_dev&hl=en_IN" class="btn btn-store" target="_blank">Google Play</a>
+          <a href="#" class="btn btn-outline">Buy Source Code</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🤖</div>
+        <span class="badge">AI Agent</span>
+        <h3>Brand AI</h3>
+        <p>AI-powered personal brand automation agent. Creates content, posts it, replies to your audience, and grows your personal brand.</p>
+        <div class="stack">Expo 57 &middot; Node.js &middot; OpenAI &middot; OAuth 2.0</div>
+        <ul class="features">
+          <li>AI content generation & scheduling</li>
+          <li>Auto-publish to social accounts</li>
+          <li>AI-powered inbox replies</li>
+          <li>Analytics dashboard</li>
+          <li>Multi-platform (X, LinkedIn, Instagram)</li>
+          <li>Dark mode support</li>
+        </ul>
+        <div class="btn-group">
+          <a href="mailto:femilsabhaya166@gmail.com?subject=Brand AI Source Code Purchase" class="btn btn-primary">Buy Now</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2026 Femil Patel. All rights reserved.<br>
+    Contact: <a href="mailto:femilsabhaya166@gmail.com">femilsabhaya166@gmail.com</a>
+    </p>
+  </div>
+
+</body>
+</html>
