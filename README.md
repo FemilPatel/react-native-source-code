@@ -48,6 +48,23 @@ AI-powered personal brand automation agent. Creates content, posts it, replies t
 - Dark mode support
 
 - 🛒 **Buy Now** — _Available on the website_
+
+### 🎨 Brand Dot — _Poster & Flyer Maker_
+
+Creative poster and banner branding application. Design flyer templates, custom business posts, and festival greeting posters.
+
+**Stack:** Expo SDK 54 · Supabase · Firebase · Apollo GraphQL
+
+**Features:**
+
+- Custom flyer, poster & banner creator canvas
+- Multi-category templates (Business, Festivals, Personal)
+- Interactive image, text styling, and color tools
+- Supabase database & Firebase authentication
+- Built-in referral rewards and share system
+- MobX state management & real-time notifications
+
+- 🛒 **Buy Now** — _Available on the website_
 ---
 
 ## 🚀 CI/CD
