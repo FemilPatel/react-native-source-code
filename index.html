@@ -258,6 +258,28 @@
       letter-spacing: 0.02em;
     }
 
+    .badge-coming-soon {
+      background: rgba(245, 158, 11, 0.12);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.25);
+      animation: comingSoonPulse 2.5s ease-in-out infinite;
+    }
+
+    @keyframes comingSoonPulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.3); }
+      50% { box-shadow: 0 0 12px 2px rgba(245, 158, 11, 0.15); }
+    }
+
+    .btn-coming-soon {
+      background: rgba(245, 158, 11, 0.1);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      cursor: default;
+      pointer-events: none;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
     .card h3 {
       font-size: 1.35rem;
       font-weight: 700;
@@ -443,7 +465,7 @@
       <div class="tabs" role="tablist">
         <button class="tab-btn active" data-tab="all" role="tab">
           <span>⚡ All Apps</span>
-          <span class="tab-count">5</span>
+          <span class="tab-count">6</span>
         </button>
         <button class="tab-btn" data-tab="published" role="tab">
           <span>📱 Published Apps</span>
@@ -451,7 +473,7 @@
         </button>
         <button class="tab-btn" data-tab="projects" role="tab">
           <span>🛠️ My Projects</span>
-          <span class="tab-count">3</span>
+          <span class="tab-count">4</span>
         </button>
       </div>
     </div>
@@ -553,6 +575,30 @@
         </div>
         <div class="btn-group">
           <a href="mailto:femilsabhaya166@gmail.com?subject=Inquiry%3A%20Brand%20Dot%20Source%20Code" class="btn btn-primary">Buy Now</a>
+        </div>
+      </div>
+
+      <!-- Card: Clipora -->
+      <div class="card" data-categories="projects">
+        <div>
+          <div class="card-top">
+            <div class="card-icon">✂️</div>
+            <span class="badge badge-coming-soon">🚧 Coming Soon</span>
+          </div>
+          <h3>Clipora — Photo & Video Editor SDK</h3>
+          <p>A powerful React Native SDK for building custom photo & video editing experiences. GPU-accelerated filters, multi-track timeline, crop, trim & export — all embeddable in your app.</p>
+          <div class="stack">React Native · Skia GPU Shaders · FFmpeg · TypeScript</div>
+          <ul class="features">
+            <li>Photo filters, brightness, contrast & crop tools</li>
+            <li>Multi-track video timeline with frame scrubbing</li>
+            <li>GPU-accelerated Skia shaders for real-time preview</li>
+            <li>Export to JPEG, PNG, WebP & video formats</li>
+            <li>Dark mode support & fully customizable theme</li>
+            <li>Drop-in SDK — embed in any React Native app</li>
+          </ul>
+        </div>
+        <div class="btn-group">
+          <span class="btn btn-coming-soon">🔔 Coming Soon</span>
         </div>
       </div>
   </div>

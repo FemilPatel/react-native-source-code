@@ -65,6 +65,24 @@ Creative poster and banner branding application. Design flyer templates, custom 
 - MobX state management & real-time notifications
 
 - 🛒 **Buy Now** — _Available on the website_
+
+### ✂️ Clipora — _Photo & Video Editor SDK_
+
+A powerful React Native SDK for building custom photo & video editing experiences. GPU-accelerated filters, multi-track timeline, crop, trim & export — all embeddable in your app.
+
+**Stack:** React Native · Skia GPU Shaders · FFmpeg · TypeScript
+
+**Features:**
+
+- Photo filters, brightness, contrast & crop tools
+- Multi-track video timeline with frame scrubbing
+- GPU-accelerated Skia shaders for real-time preview
+- Export to JPEG, PNG, WebP & video formats
+- Dark mode support & fully customizable theme
+- Drop-in SDK — embed in any React Native app
+
+- 🚧 **Coming Soon**
+
 ---
 
 ## 🚀 CI/CD
