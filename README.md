@@ -53,6 +53,8 @@ AI-powered personal brand automation agent. Creates content, posts it, replies t
 
 - 🛒 **Buy Now** — _Available on the website_
 
+> ⚠️ **Note:** This is a Prototype Structure — not fully developed yet.
+
 ### 🎨 Brand Dot — _Poster & Flyer Maker_
 
 <img src="assets/branddot.png" alt="Brand Dot Banner" width="120" />
@@ -90,6 +92,9 @@ A powerful React Native SDK for building custom photo & video editing experience
 - Drop-in SDK — embed in any React Native app
 
 - 🛒 **Buy Now** — _Available on the website_
+- 📥 [Download APK](https://drive.google.com/file/d/15OcojLj6Aivw4hKZCa-eEJiSPBoQpv0B/view?usp=sharing)
+
+> ⚠️ **Note:** This is a Prototype Structure — not fully developed yet.
 
 ---
 
