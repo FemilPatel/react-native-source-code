@@ -28,11 +28,15 @@ Classic Sudoku brain puzzle game with multiple difficulty levels.
 
 ### 🏃 Steps Set Go — _Fitness_
 
+<img src="assets/stepssetgo.png" alt="Steps Set Go Banner" width="120" />
+
 Fitness and step counter app with goal tracking and analytics.
 
 - 🛒 **Buy Now** — _Available on the website_
 
 ### 🤖 Brand AI — _AI Agent_
+
+<img src="assets/brandai.png" alt="Brand AI Banner" width="120" />
 
 AI-powered personal brand automation agent. Creates content, posts it, replies to your audience, and grows your personal brand automatically.
 
@@ -51,6 +55,8 @@ AI-powered personal brand automation agent. Creates content, posts it, replies t
 
 ### 🎨 Brand Dot — _Poster & Flyer Maker_
 
+<img src="assets/branddot.png" alt="Brand Dot Banner" width="120" />
+
 Creative poster and banner branding application. Design flyer templates, custom business posts, and festival greeting posters.
 
 **Stack:** Expo SDK 54 · Supabase · Firebase · Apollo GraphQL
@@ -67,6 +73,8 @@ Creative poster and banner branding application. Design flyer templates, custom 
 - 🛒 **Buy Now** — _Available on the website_
 
 ### ✂️ Clipora — _Photo & Video Editor SDK_
+
+<img src="assets/clipora.png" alt="Clipora Banner" width="120" />
 
 A powerful React Native SDK for building custom photo & video editing experiences. GPU-accelerated filters, multi-track timeline, crop, trim & export — all embeddable in your app.
 
