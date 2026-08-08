@@ -10,12 +10,16 @@ My collection of production-ready React Native applications.
 
 ### ❌ Tic Tac Toe — _Game_
 
+<img src="assets/tictactoe.png" alt="Tic Tac Toe Icon" width="120" />
+
 Classic Tic-Tac-Toe board game with multiplayer and offline AI play.
 
 - 👉 [Download on Google Play](https://play.google.com/store/apps/details?id=com.tic_tac_toe_application_dev&hl=en_IN)
 - 👉 App Store: _Coming Soon_
 
 ### 🔢 Sudoku Game — _Puzzle_
+
+<img src="assets/sudoku.png" alt="Sudoku Game Icon" width="120" />
 
 Classic Sudoku brain puzzle game with multiple difficulty levels.
 
