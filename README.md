@@ -81,7 +81,7 @@ A powerful React Native SDK for building custom photo & video editing experience
 - Dark mode support & fully customizable theme
 - Drop-in SDK — embed in any React Native app
 
-- 🚧 **Coming Soon**
+- 🛒 **Buy Now** — _Available on the website_
 
 ---
 
