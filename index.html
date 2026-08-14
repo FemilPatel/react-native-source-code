@@ -52,7 +52,7 @@
     "@context": "https://schema.org",
     "@type": "ItemList",
     "name": "React Native Apps",
-    "numberOfItems": 6,
+    "numberOfItems": 7,
     "itemListElement": [
       {
         "@type": "ListItem",
@@ -89,6 +89,12 @@
         "position": 6,
         "name": "Tic Tac Toe",
         "description": "Classic Tic-Tac-Toe board game with smooth animations and multiplayer mode."
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "name": "Bingo",
+        "description": "Classic Bingo number game with fun animations and multiplayer support."
       }
     ]
   }
@@ -574,11 +580,11 @@
       <div class="tabs" role="tablist">
         <button class="tab-btn active" data-tab="all" role="tab">
           <span>⚡ All Apps</span>
-          <span class="tab-count">6</span>
+          <span class="tab-count">7</span>
         </button>
         <button class="tab-btn" data-tab="published" role="tab">
           <span>📱 Published Apps</span>
-          <span class="tab-count">2</span>
+          <span class="tab-count">3</span>
         </button>
         <button class="tab-btn" data-tab="projects" role="tab">
           <span>🛠️ My Projects</span>
@@ -684,6 +690,23 @@
         </div>
         <div class="btn-group">
           <a href="https://play.google.com/store/apps/details?id=com.tic_tac_toe_application_dev&hl=en_IN" class="btn btn-store" target="_blank" rel="noopener">
+            <span>▶</span> Google Play
+          </a>
+        </div>
+      </div>
+
+      <!-- Card: Bingo -->
+      <div class="card" data-categories="published">
+        <div>
+          <div class="card-top">
+            <div class="card-icon"><img src="assets/bingo.png" alt="Bingo"></div>
+            <span class="badge">Game</span>
+          </div>
+          <h3>Bingo</h3>
+          <p>Classic Bingo number game with fun animations, multiplayer support, and exciting gameplay — built with React Native.</p>
+        </div>
+        <div class="btn-group">
+          <a href="https://play.google.com/store/apps/details?id=com.oriontech.bingo" class="btn btn-store" target="_blank" rel="noopener">
             <span>▶</span> Google Play
           </a>
         </div>
