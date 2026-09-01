@@ -26,6 +26,15 @@ Classic Tic-Tac-Toe board game with multiplayer and offline AI play.
 - 👉 [Download on Google Play](https://play.google.com/store/apps/details?id=com.tic_tac_toe_application_dev&hl=en_IN)
 - 👉 App Store: _Coming Soon_
 
+### ❌ Tic Tac Toe Next Gen — _Game_
+
+<img src="assets/tictactoenext.png" alt="Tic Tac Toe Next Gen Icon" width="120" />
+
+Next-generation Tic-Tac-Toe board game with smooth animations, multiplayer mode, and offline AI play.
+
+- 👉 [Download on Google Play](https://play.google.com/store/apps/details?id=com.tictactoenextgen)
+- 👉 App Store: _Coming Soon_
+
 ### 🔢 Sudoku Game — _Puzzle_
 
 <img src="assets/sudoku.png" alt="Sudoku Game Icon" width="120" />
