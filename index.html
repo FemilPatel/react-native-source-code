@@ -580,11 +580,11 @@
       <div class="tabs" role="tablist">
         <button class="tab-btn active" data-tab="all" role="tab">
           <span>⚡ All Apps</span>
-          <span class="tab-count">7</span>
+          <span class="tab-count">8</span>
         </button>
         <button class="tab-btn" data-tab="published" role="tab">
           <span>📱 Published Apps</span>
-          <span class="tab-count">3</span>
+          <span class="tab-count">4</span>
         </button>
         <button class="tab-btn" data-tab="projects" role="tab">
           <span>🛠️ My Projects</span>
@@ -741,6 +741,24 @@
     document.addEventListener('DOMContentLoaded', () => {
       const tabButtons = document.querySelectorAll('.tab-btn');
       const cards = document.querySelectorAll('.card');
+
+      const updateCounts = () => {
+        let publishedCount = 0;
+        let projectsCount = 0;
+        cards.forEach(card => {
+          const cats = (card.getAttribute('data-categories') || '').split(' ');
+          if (cats.includes('published')) publishedCount++;
+          if (cats.includes('projects')) projectsCount++;
+        });
+        const allBtn = document.querySelector('.tab-btn[data-tab="all"] .tab-count');
+        const pubBtn = document.querySelector('.tab-btn[data-tab="published"] .tab-count');
+        const projBtn = document.querySelector('.tab-btn[data-tab="projects"] .tab-count');
+        if (allBtn) allBtn.textContent = cards.length;
+        if (pubBtn) pubBtn.textContent = publishedCount;
+        if (projBtn) projBtn.textContent = projectsCount;
+      };
+
+      updateCounts();
 
       tabButtons.forEach(button => {
         button.addEventListener('click', () => {
