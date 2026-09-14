@@ -44,6 +44,15 @@ Classic Sudoku brain puzzle game with multiple difficulty levels.
 - 👉 [Download on Google Play](https://play.google.com/store/apps/details?id=com.sudoku_game_dev&hl=en_IN)
 - 👉 App Store: _Coming Soon_
 
+### 🔢 Sudoku: Classic Logic Puzzle — _Puzzle (Ionic + React)_
+
+<img src="assets/sudoku-classic.png" alt="Sudoku: Classic Logic Puzzle Icon" width="120" />
+
+Classic Sudoku logic puzzle game featuring real-time 1v1 multiplayer mode, custom difficulty levels, hints, and fast mode — built with Ionic & React.
+
+- 👉 [Download on Google Play](https://play.google.com/store/apps/details?id=com.oriontech.sudoku)
+- 👉 App Store: _Coming Soon_
+
 ---
 
 ## 🛠️ My Projects
