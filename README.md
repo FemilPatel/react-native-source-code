@@ -8,6 +8,33 @@ My collection of production-ready React Native applications.
 
 ## 📱 Published Apps
 
+### 💬 QuickChat: Live Random Chat — _Real-Time Chat (Flutter)_
+
+<img src="assets/quickchat.png" alt="QuickChat Icon" width="120" />
+
+Instant 1-on-1 ephemeral conversations with real-time WebSocket matching, clean modern UI, and zero registration required.
+
+- 👉 [Download on Google Play](https://play.google.com/store/apps/details?id=com.quickchat.live.random.chat)
+- 👉 App Store: _Coming Soon_
+
+### 🛸 UFO Dash: Sky Runner — _Arcade Game (Android / Kotlin)_
+
+<img src="assets/ufodash.png" alt="UFO Dash Icon" width="120" />
+
+Fast-paced arcade sky runner where players navigate a UFO through cosmic obstacles with smooth physics, immersive audio, and high scores.
+
+- 👉 [Download on Google Play](https://play.google.com/store/apps/details?id=com.ufodash.skyrunner.game)
+- 👉 App Store: _Coming Soon_
+
+### 🚀 Rocket Dash: Space Shooter — _Arcade Shooter (Android / Kotlin)_
+
+<img src="assets/rocketdash.png" alt="Rocket Dash Icon" width="120" />
+
+Action-packed 2D retro space shooter featuring tactical spaceship combat, asteroid dodging, laser power-ups, and arcade survival.
+
+- 👉 [Download on Google Play](https://play.google.com/store/apps/details?id=com.rocketdash.spaceshooter)
+- 👉 App Store: _Coming Soon_
+
 ### 🎱 Bingo — _Game_
 
 <img src="assets/bingo.png" alt="Bingo Icon" width="120" />
